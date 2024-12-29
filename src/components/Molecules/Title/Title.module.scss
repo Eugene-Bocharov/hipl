@@ -1,0 +1,60 @@
+.container {
+  margin-top: 100px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-size: 70px;
+  color: #000000;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+  @media (max-width: 1135px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 950px) {
+    font-size: 40px;
+  }
+}
+
+.title.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.seeButton {
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  height: 50px;
+  width: 280px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 13px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+  @media (max-width: 850px) {
+    margin-left: 0;
+  }
+}
+
+.seeButton.animated {
+  opacity: 1;
+  transform: translateY(0);
+}

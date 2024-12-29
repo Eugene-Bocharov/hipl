@@ -1,0 +1,142 @@
+.container {
+  margin-top: 50px;
+  height: 450px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  display: flex;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+}
+
+.buttonBox {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  margin-top: auto;
+  margin-bottom: auto;
+  @media (max-width: 1280px) {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.title {
+  font-size: 40px;
+  color: #ffffff;
+  // text-align: center;
+  width: 60%;
+  font-weight: 550;
+  min-width: 360px;
+
+  @media (max-width: 1280px) {
+    justify-content: center;
+    width: 100%;
+      text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 550px) {
+      text-align: center;
+    font-size: 30px;
+    min-width: 0px;
+  }
+}
+
+.description {
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  max-width: 50%;
+  margin: auto auto;
+  margin-right: 50px;
+  line-height: 27px;
+
+  @media (max-width: 1280px) {
+    max-width: 100%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+
+.seeButton {
+  color: black;
+  background-color: #fff;
+  height: 45px;
+  width: 160px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 13px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  @media (max-width: 768px) {
+    margin-left: 0;
+    height: 45px;
+    width: 130px;
+    padding-top: 13px;
+  }
+}
+
+.contactButton {
+  color: rgb(255, 255, 255);
+  height: 45px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 13px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 45px;
+
+  &:hover {
+    margin-left: 55px;
+  }
+  @media (max-width: 550px) {
+    margin-left: 0px;
+    width: 130px;
+  }
+}
+
+.boxDivider {
+  display: flex;
+}
+
+.red {
+  background: linear-gradient(
+    35deg,
+    rgba(114, 23, 56, 1) 0%,
+    rgba(223, 71, 70, 1) 100%
+  );
+}
+
+.blue {
+  background: linear-gradient(
+    35deg,
+    rgb(11, 117, 149) 0%,
+    rgb(46, 29, 204) 100%
+  );
+}
+
+
+.black {
+  background: linear-gradient(
+    35deg,
+    rgb(10, 9, 9) 0%,
+    rgb(37, 37, 37) 100%
+  );
+}

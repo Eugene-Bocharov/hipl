@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+}
+
+body {
+  background-color: #ffffff;
+  /* height: 10000px; */
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*::selection {
+  background-color: #df4746; /* Set your desired background color */
+  color: rgb(255, 255, 255); /* Set your desired text color */
+  border-radius: 89px !important; /* Set the desired border radius value */
+}
+
+/* Hide the scrollbar by default */
+::-webkit-scrollbar {
+  width: 0.5em;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  background-color: #21212100;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+  transition: opacity 0.5s 0.5s ease-out;
+}
+
+/* Show the scrollbar when scrolling */
+::-webkit-scrollbar-thumb {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  border-radius: 15px;
+  background: rgb(70, 70, 70);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+  transition: opacity 0.5s 0.5s ease-out;
+}
+
+/* Customize the scrollbar track appearance */
+::-webkit-scrollbar-track {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  background-color: #ffffffa7;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+  transition: opacity 0.5s 0.5s ease-out;
+}
+.scrollbar-track {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  background-color: #21212100;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+  transition: opacity 0.5s 0.5s ease-out;
+}

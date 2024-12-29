@@ -1,0 +1,66 @@
+.container {
+  width: 100%;
+  //   height: 180px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 920px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 550;
+  margin-bottom: 15px;
+  text-wrap: nowrap;
+  @media (max-width: 470px) {
+    font-size: 25px;
+  }
+}
+
+.description {
+  font-size: 17px;
+  font-weight: 500;
+  color: #cfd0d1;
+  text-align: left;
+  max-width: 50%;
+  line-height: 27px;
+  @media (max-width: 920px) {
+    max-width: 100%;
+  }
+  @media (max-width: 470px) {
+    font-size: 15px;
+  }
+}
+
+.seeButton {
+  color: black;
+  background-color: #fff;
+  height: 35px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.dividerBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 20px;
+  color: #c2c2c2;
+  // text-align: center;
+  margin-top: 0;
+  font-weight: 350;
+  text-wrap: nowrap;
+  @media (max-width: 470px) {
+    font-size: 15px;
+  }
+}

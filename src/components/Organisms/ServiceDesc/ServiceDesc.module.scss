@@ -1,0 +1,133 @@
+.container {
+  margin-top: 50px;
+  width: 60%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  //   background-color: #9d9d9d;
+}
+
+.title {
+  font-size: 40px;
+  color: #000000;
+  font-weight: 550;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactButton {
+  color: #000000;
+  height: 45px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 13px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 45px;
+}
+
+.boxDivider {
+  display: flex;
+}
+
+.tabSection {
+  margin-top: 100px;
+}
+
+.tab {
+  color: #000000; /* Text color */
+  border: none;
+  height: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 20px;
+  padding-left: 20px;
+  text-wrap: nowrap;
+  padding-right: 20px;
+  //   margin-right: 50px;
+  position: relative; /* Position relative for absolute positioning of underline */
+  &:focus {
+    /* Keep outline removed */
+    outline: none;
+  }
+  &[aria-selected='true'] {
+    color: #000000; /* Text color */
+    background-color: #fff;
+
+    text-decoration: none; /* Remove default underline */
+  }
+  @media (max-width: 550px) {
+    font-size: 17px;
+  }
+}
+
+.tabList {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.tabContainer {
+  background-color: #edf0f3;
+  padding: 5px;
+  //   width: 100%;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.titleTab {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #535353;
+  text-align: center;
+
+  @media (max-width: 1250px) {
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+  }
+  @media (max-width: 950px) {
+    font-size: 19px;
+    max-width: 100%;
+  }
+}
+
+.contactButtonTab {
+  display: block;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  height: 50px;
+  width: 280px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}

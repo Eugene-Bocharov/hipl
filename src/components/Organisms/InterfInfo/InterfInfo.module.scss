@@ -1,0 +1,100 @@
+.container {
+  position: relative;
+  height: 250px;
+  // background-color: #be7171;
+  @media (max-width: 1050px) {
+    height: 450px;
+  }
+
+}
+
+.interfBlock {
+  background-color: #ffffff;
+  width: 80%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (max-width: 1500px) {
+    width: 90%;
+}
+@media (max-width: 1050px) {
+  width: 100%;
+}
+}
+
+.contentBox {
+  position: relative;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  margin-top: 60px;
+  font-size: 50px;
+  font-weight: 500;
+  opacity: 0; /* Start as invisible */
+  transform: translateY(20px); /* Start off slightly below */
+  transition:
+    opacity 1s ease,
+    transform 1s ease-out;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  width: 70%;
+  line-height: 35px;
+  opacity: 0; /* Start as invisible */
+  transform: translateY(20px); /* Start off slightly below */
+  transition:
+    opacity 1s ease,
+    transform 1s ease-out;
+}
+
+.dividerline {
+  margin-top: 50px;
+  background-color: #bfbfbf;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 0%; /* Start with width 0 */
+  opacity: 0; /* Start as invisible */
+  transition:
+    opacity 1s ease,
+    width 2s ease-out; /* Animate width over 2 seconds */
+}
+
+.visible {
+  opacity: 1; /* Make the element visible */
+  transform: translate(-50%, -50%); /* Reset position */
+}
+
+.visibleTitle {
+  opacity: 1;
+  transform: translateY(0); /* Move title up to its original position */
+}
+
+.visibleDescription {
+  opacity: 1;
+  transform: translateY(0); /* Move description up to its original position */
+}
+
+.visibleDivider {
+  opacity: 1;
+  width: 70%; /* When visible, set the width to 70% */
+}
+
+.animatedOnce {
+  animation: none; /* Prevent the animation from running again */
+}

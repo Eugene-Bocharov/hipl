@@ -1,0 +1,33 @@
+.container {
+  margin-top: 100px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 60px;
+  color: #000000;
+}
+
+.imgBox {
+  width: 47%; /* Adjust according to your design */
+  height: 70vh;
+  background-image: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  display: flex;
+  justify-content: left;
+  align-items: end;
+}
+.divider {
+  width: 47%;
+}
+
+.subTitle {
+  font-size: 30px;
+}
