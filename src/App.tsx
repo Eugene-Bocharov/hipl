@@ -17,31 +17,6 @@ import NewConstr from './pages/ServPages/NewConstr';
 import { DevPage } from './pages/DevPage/DevPage';
 
 function App() {
-  useEffect(() => {
-    const scrollSpeed = 0.1; // Lower value = slower scroll speed
-
-    let lastScrollTop = 0;
-    const scrollHandler = () => {
-      const currentScrollTop = window.scrollY;
-
-      // Calculate the distance moved during the scroll event
-      const delta = currentScrollTop - lastScrollTop;
-
-      // Adjust scroll speed
-      if (Math.abs(delta) > 0) {
-        window.scrollBy(0, delta * scrollSpeed); // Slow down scroll
-      }
-
-      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-    };
-
-    window.addEventListener('scroll', scrollHandler);
-
-    return () => {
-      window.removeEventListener('scroll', scrollHandler);
-    };
-  }, []);
-
   return (
     <>
       <Router>

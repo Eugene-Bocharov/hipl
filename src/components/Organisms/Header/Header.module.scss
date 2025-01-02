@@ -1,76 +1,100 @@
 .header {
   width: 100%;
-  height: 60px;
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease; // Add transition for smooth change
+    transform 0.3s ease,
+    opacity 0.3s ease; // Smooth show/hide effect
+}
+
+.hidden {
+  top: -10%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  transition: all 0.3s linear;
+  transform: translateY(-100%) !important;
+  opacity: 0; // Fade out when hidden
+}
+
+.visible {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  transition: all 0.3s linear;
+  transform: translateY(0) !important;
+  opacity: 1; // Fade in when visible
 }
 
 .appBar {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: transparent; // Set default background to transparent
-  color: white; // Set default text color to white
+  background-color: transparent; // Transparent by default
+  color: white; // White text by default
+  box-shadow: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .appBar.scrolled {
-  background-color: #fff; // Change to white when scrolled
-  color: #000; // Set text color to black when scrolled
+  background-color: #ffffff; // White background when scrolled
+  color: #000; // Black text when scrolled
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for scrolled state
 }
 
 .toolbar {
-  background-color: transparent; // Make toolbar transparent by default
-  box-shadow: none;
-}
-
-.incontainer {
-  width: 80%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.divider {
-  width: 100%;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.title {
-  margin-right: 80px !important;
-  font-weight: 900;
-  color: inherit; // Use inherited color
-}
-
-.divcontainerl {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 20px;
 }
 
-.button {
-  background-color: #fff;
-  border: none;
-  font-size: large;
-}
-
-.txt {
-  color: inherit; // Use inherited color
-}
-
-.logocontainer {
-  height: 50px;
-  width: 50px;
-  margin-right: 50px;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .logo {
-  background-image: url('../../../static/logoh2.png');
+  width: 130px;
+  height: 40px;
   background-size: cover;
-  background-color: #ffffff;
-  height: 100%;
+  background-repeat: no-repeat;
+  transition:
+    background-image 0.2s ease,
+    transform 0.2s ease; // Add logo scaling animation
+}
+
+.logoDefault {
+  background-image: url('../../../static/logoh3.png'); // Default logo
+}
+
+.logoScrolled {
+  background-image: url('../../../static/logoh2.png'); // Scrolled logo
+  transform: scale(1.1); // Slightly scale the logo when scrolled
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.headerLink {
+  color: inherit; // Use inherited color (white or black based on scroll)
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease; // Add hover effect
+
+  &:hover {
+    color: #ff0000;
+    transform: translateY(-2px); // Slight hover lift
+  }
 }
