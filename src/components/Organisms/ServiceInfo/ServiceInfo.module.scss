@@ -1,0 +1,90 @@
+.container {
+  margin: 50px auto;
+  width: 70%;
+  position: relative;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 500;
+  color: #000;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
+}
+
+.title.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.serviceCard {
+  margin-bottom: 40px;
+  padding: 20px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-in-out;
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h2 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #000000;
+    line-height: 1.5;
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.dividerline {
+  background-color: #bfbfbf;
+  height: 2px;
+  width: 0;
+  margin: 20px auto;
+  opacity: 0;
+  transition:
+    opacity 1s ease,
+    width 2s ease-out;
+
+  &.animated {
+    width: 100%;
+    opacity: 1;
+  }
+}

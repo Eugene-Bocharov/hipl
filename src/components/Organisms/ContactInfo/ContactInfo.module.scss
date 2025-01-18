@@ -6,6 +6,17 @@
   min-height: 75vh;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0; /* Start with the container invisible */
+  transform: translateY(50px); /* Start with an offset position */
+  transition:
+    opacity 1s ease,
+    transform 1s ease; /* Animate opacity and position */
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+  }
+
   @media (max-width: 1200px) {
     align-items: center;
     flex-direction: column;
@@ -13,17 +24,27 @@
 }
 
 .title {
-  font-size: 60px;
+  font-size: 80px;
   color: #000000;
   text-align: left;
   max-width: 45%;
-  font-weight: bold;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px); /* Slide in from above */
+  transition:
+    opacity 1s ease,
+    transform 1s ease; /* Animate opacity and slide effect */
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+  }
+
   @media (max-width: 1750px) {
     font-size: 50px;
   }
   @media (max-width: 1750px) {
     margin-top: 120px;
-    // font-size: 40px;
     max-width: 35%;
     text-align: center;
   }
@@ -34,11 +55,20 @@
 }
 
 .collumn {
-  // margin-right: 150px;
-//   margin-top: 100px;
   margin-right: 150px;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px); /* Start with an offset */
+  transition:
+    opacity 1s ease,
+    transform 1s ease; /* Animate opacity and position */
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0); /* Reset position */
+  }
+
   @media (max-width: 1050px) {
     margin-right: 100px;
   }
@@ -48,18 +78,41 @@
 }
 
 .subTitle {
-    font-size: 30px;
-    margin: 0 0 20px 0;
-    font-weight: 600;
-    color: #000000;
-    text-wrap: nowrap;
+  font-size: 30px;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+  color: #000000;
+  opacity: 0;
+  transform: translateY(20px); /* Start with a slight offset */
+  transition:
+    opacity 1s ease,
+    transform 1s ease; /* Animate opacity and position */
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
   }
-  
+}
 
 .link {
-  color: #535353;
+  color: #000000;
+  font-weight: 400;
   text-decoration: none;
   font-size: large;
   margin-bottom: 15px;
-  text-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px); /* Start with a slight offset */
+  transition:
+    opacity 1s ease,
+    transform 1s ease 0.2s; /* Delay the animation slightly */
+
+  &:hover {
+    color: #007bff; /* Change color on hover */
+    text-decoration: underline;
+  }
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+  }
 }

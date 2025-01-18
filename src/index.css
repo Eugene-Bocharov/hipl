@@ -4,7 +4,9 @@
   box-sizing: border-box;
   transition: all 0.3s linear;
 }
-
+html {
+  scroll-behavior: liquid-smooth;
+}
 body {
   background-color: #ffffff;
   /* height: 10000px; */
