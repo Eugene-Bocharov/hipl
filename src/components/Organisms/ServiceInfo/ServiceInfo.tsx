@@ -7,6 +7,8 @@ interface ServiceInfoProps {
     name: string;
     description: string;
     link: string;
+    listItems?: string[];
+    price: string; // Add price property
   }[];
 }
 
@@ -32,7 +34,7 @@ export function ServiceInfo(props: ServiceInfoProps) {
           }
         });
       },
-      { threshold: 0.5 } // Trigger animation when 50% of the service card is visible
+      { threshold: 0.5 }
     );
 
     if (containerRef.current) {
@@ -52,11 +54,7 @@ export function ServiceInfo(props: ServiceInfoProps) {
 
   return (
     <div className={styles.container} ref={containerRef}>
-      <h1
-        className={`${styles.title} ${hasTitleAnimated ? styles.animated : ''}`}
-      >
-        {props.title}
-      </h1>
+      <h1 className={styles.mainTitle}>Our Services</h1>
       <div className={styles.servicesContainer}>
         {props.services.map((service, index) => (
           <div
@@ -66,7 +64,18 @@ export function ServiceInfo(props: ServiceInfoProps) {
             }`}
           >
             <h2 className={styles.serviceName}>{service.name}</h2>
+            {service.listItems && service.listItems.length > 0 && (
+              <ul className={styles.dottedList}>
+                {service.listItems.map((item, i) => (
+                  <li key={i} className={styles.listItem}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
             <p className={styles.serviceDescription}>{service.description}</p>
+            <p className={styles.servicePrice}>{service.price}</p>{' '}
+            {/* Add price */}
             <a
               className={styles.getQuoteButton}
               href={service.link}
@@ -75,11 +84,6 @@ export function ServiceInfo(props: ServiceInfoProps) {
             >
               Get a Quote
             </a>
-            <div
-              className={`${styles.dividerline} ${
-                animatedCards[index] ? styles.animated : ''
-              }`}
-            ></div>
           </div>
         ))}
       </div>

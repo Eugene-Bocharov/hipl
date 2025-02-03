@@ -17,6 +17,7 @@ import { photos } from '../../static/serviceExp';
 import { InterfInfo } from '../../components/Organisms/InterfInfo/InterfInfo';
 import { BigPic } from '../../components/Organisms/BigPic/BigPic';
 import { StatComp } from '../../components/Organisms/StatComp/StatComp';
+import { Partners } from '../../components/Organisms/Partners/Partners';
 
 export function Homepage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -44,8 +45,14 @@ export function Homepage() {
         title="About us"
         description="At Hipl, we specialize in creating custom websites and web designs that help small businesses in Montreal stand out and succeed. Whether you're just starting or looking to update your current site, we bring your vision to life."
       />
-      <BigPic video={2} title="Give Emotions" link="" />
-      <StatComp />
+      <BigPic video={2} title="Give Emotions" link="#" />
+      <StatComp
+        stats={[
+          { value: '100', label: 'Users' },
+          { value: '200', label: 'Posts' },
+          { value: '300', label: 'Comments' },
+        ]}
+      />
       {/* <PicDesc
         title="Our specialization"
         description="We specialize in exterior finishings and interior projects. We take pride in tackling challenges head-on, ensuring every project reflects our commitment."
@@ -63,6 +70,7 @@ export function Homepage() {
         position="reversed"
         pic={photos.nc[3]}
       /> */}
+      <Partners title="Our Clients" pic=[] />
       <Title title="Ready to work with us?" link="/contact" />
       <Footer />
       {/* <Openscreen /> */}

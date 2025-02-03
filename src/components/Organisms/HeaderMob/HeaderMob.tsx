@@ -75,10 +75,9 @@ export const HeaderMob = () => {
         <div className={styles.menu}>
           <div className={styles.mobcontainer}>
             <HeaderLinkMob text="Home" href="/" />
-            <HeaderLinkMob text="About" href="/about" />
-            <HeaderLinkMob text="Services" href="/services" />
-            <HeaderLinkMob text="Appoinments" href="/appointments" />
-            <HeaderLinkMob text="Careers" href="/careers" />
+            <HeaderLinkMob text="Development" href="/development" />
+            <HeaderLinkMob text="Design" href="/design" />
+            <HeaderLinkMob text="Appointments" href="/appointments" />
             <HeaderLinkMob text="Contact" href="/contact" />
           </div>
         </div>

@@ -1,0 +1,29 @@
+.container {
+  margin-top: 150px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px; /* Increased space between images */
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}

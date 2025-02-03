@@ -1,6 +1,10 @@
 .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    minmax(200px, 1fr)
+  ); /* Use grid with auto-fit */
+  gap: 10px; /* Gap between grid items */
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -9,9 +13,13 @@
     margin-top: 50px;
   }
   @media (max-width: 1050px) {
-    flex-direction: column;
+    grid-template-columns: 1fr; /* Single column on smaller screens */
     margin-top: 50px;
   }
+}
+
+.marginTop {
+  margin-top: 50px; /* Add top margin */
 }
 
 .stat {

@@ -29,7 +29,6 @@
 }
 
 .contentTextBox {
-  font-family: 'Titillium Web', serif;
   font-weight: 500;
   font-style: normal;
   margin-left: 15%;
@@ -61,4 +60,40 @@
   font-weight: 500;
   font-size: 35px;
   margin-top: 0;
+}
+
+.interfInfoTitle {
+  margin-top: 60px;
+  font-size: 50px;
+  font-weight: 500;
+  opacity: 0; /* Start as invisible */
+  transform: translateY(20px); /* Start off slightly below */
+  transition:
+    opacity 1s ease,
+    transform 1s ease-out;
+}
+
+.interfInfoSubtitle {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .videoContainer {
+    height: 120vh;
+  }
+
+  .contentTextBox {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
 }

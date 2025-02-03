@@ -4,10 +4,14 @@ import styles from './TextTItle.module.scss';
 // Define HeaderLinkProps interface
 interface TextTitleProps {
   text: string;
+  noDivider?: boolean; // Optional prop for divider
 }
 
 // Define HeaderLink component
-export const TextTitle: React.FC<TextTitleProps> = ({ text }) => {
+export const TextTitle: React.FC<TextTitleProps> = ({
+  text,
+  noDivider = false,
+}) => {
   const [isAnimated, setIsAnimated] = useState(false);
   const statsRef = useRef(null);
 
@@ -40,9 +44,11 @@ export const TextTitle: React.FC<TextTitleProps> = ({ text }) => {
       <h2 className={`${styles.title} ${isAnimated ? styles.animated : ''}`}>
         {text}
       </h2>
-      <div
-        className={`${styles.dividerline} ${isAnimated ? styles.animated : ''}`}
-      ></div>
+      {!noDivider && (
+        <div
+          className={`${styles.dividerline} ${isAnimated ? styles.animated : ''}`}
+        ></div>
+      )}
     </div>
   );
 };

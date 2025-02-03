@@ -59,13 +59,13 @@ export function HomeWelc() {
         <div className={styles.contentContainer}>
           <div className={styles.contentTextBox}>
             <h1
-              className={`${styles.title} ${isAnimated ? styles.animated : ''}`}
+              className={`${styles.title} ${isAnimated ? styles.animated : ''} ${styles.interfInfoTitle}`}
               ref={titleRef}
             >
               Web Development Agency
             </h1>
             <h3
-              className={`${styles.subtitle} ${isAnimated ? styles.animated : ''}`}
+              className={`${styles.subtitle} ${isAnimated ? styles.animated : ''} ${styles.interfInfoSubtitle}`}
               ref={subtitleRef}
             >
               By Yevhenii Bocharov

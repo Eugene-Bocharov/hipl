@@ -4,9 +4,14 @@ import styles from './Title.module.scss';
 interface TitleProps {
   title: string;
   link?: string; // Optional link
+  logoSrc?: string; // Optional logo source
 }
 
-export const Title: React.FC<TitleProps> = ({ title, link }: TitleProps) => {
+export const Title: React.FC<TitleProps> = ({
+  title,
+  link,
+  logoSrc,
+}: TitleProps) => {
   const [isAnimated, setIsAnimated] = useState(false);
   const titleRef = useRef(null);
 
@@ -36,6 +41,7 @@ export const Title: React.FC<TitleProps> = ({ title, link }: TitleProps) => {
 
   return (
     <div className={styles.container}>
+      {logoSrc && <img src={logoSrc} alt="Logo" className={styles.logo} />}
       <h2
         className={`${styles.title} ${isAnimated ? styles.animated : ''}`}
         ref={titleRef}

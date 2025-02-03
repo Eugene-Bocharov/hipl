@@ -3,6 +3,7 @@ import styles from './BigPic.module.scss';
 import video from '../../../static/video.mp4';
 import video2 from '../../../static/video2.mp4';
 import video3 from '../../../static/video3.mp4';
+import arrowIcon from '../../../static/right-arrow.png'; // Add this import
 const videos = [video, video2, video3];
 
 interface PicDescProps {
@@ -52,7 +53,10 @@ export function BigPic(props: PicDescProps) {
               <h1
                 className={`${styles.title} ${hasAnimated ? styles.visibleTitle : ''}`}
               >
-                {props.title}
+                {props.title}{' '}
+                <a href={props.link}>
+                  {/* <img src={arrowIcon} alt="arrow" className={styles.arrow} /> */}
+                </a>
               </h1>
             </div>
           </div>
