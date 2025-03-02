@@ -2,7 +2,7 @@
   width: 70%;
   margin: 50px auto;
   padding: 0 16px;
-  @media (max-width: 1650px) {
+  @media (max-width: 1800px) {
     width: 90%; // 2 columns for tablets
   }
 }
@@ -41,18 +41,32 @@
   }
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .portfolioItem {
+  display: flex;
+  align-items: flex-start; // Align items to the top
   color: black; // Make text black
   text-decoration: none; // Remove underline from links
 }
 
 .image {
-  width: 100%;
-  height: 320px; // Set fixed height for images
+  width: 400px; // Set width
+  height: 250px; // Set height
+  object-fit: cover; // Ensure the image covers the div
   background-size: cover; // Ensure the background image covers the div
   background-position: center; // Center the background image
   background-repeat: no-repeat; // Prevent the background image from repeating
-  // ...existing styles...
+  margin-right: 24px; // Increased margin
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -68,10 +82,16 @@
 .itemTitle {
   font-size: 1.4rem; // Adjusted to match InterfInfo
   font-weight: 500; // Adjusted to match InterfInfo
-  margin-top: 8px; // Adjusted to match InterfInfo
+  margin-top: 0; // Adjusted to match InterfInfo
 }
 
 .itemDescription {
   font-size: 0.9rem; // Adjusted to match InterfInfo
   color: #555; // Adjusted to match InterfInfo
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 16px 0;
 }

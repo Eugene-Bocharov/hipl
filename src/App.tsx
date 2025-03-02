@@ -8,12 +8,6 @@ import { AboutPage } from './pages/AboutPage/AboutPage';
 import { ContactPage } from './pages/ContactPage/ContactPage';
 import { AppoinmentPage } from './pages/AppoinmentPage/AppoinmentPage';
 import ProjectsPage from './pages/ProjectsPages/ProjectsPage';
-import ExterPage from './pages/ServPages/ExterPage';
-import HomAEPage from './pages/ServPages/HomAEPage';
-import InterPage from './pages/ServPages/InterPage';
-import RoofingPage from './pages/ServPages/RoofingPage';
-import TestimonialsPage from './pages/ProjectsPages/TestimonialsPage';
-import NewConstr from './pages/ServPages/NewConstr';
 import { DevPage } from './pages/DevPage/DevPage';
 
 function App() {

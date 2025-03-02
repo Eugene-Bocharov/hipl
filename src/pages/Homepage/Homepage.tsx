@@ -70,7 +70,7 @@ export function Homepage() {
         position="reversed"
         pic={photos.nc[3]}
       /> */}
-      <Partners title="Our Clients" pic=[] />
+      <Partners title="Our Clients" pic={photos.clientlogos} />
       <Title title="Ready to work with us?" link="/contact" />
       <Footer />
       {/* <Openscreen /> */}
