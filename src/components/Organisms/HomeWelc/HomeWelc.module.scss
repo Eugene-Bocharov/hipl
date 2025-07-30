@@ -51,20 +51,20 @@
 .title {
   color: #fff;
   font-weight: 500;
-  font-size: 90px;
+  font-size: 110px;
   margin-bottom: 0;
 }
 
 .subtitle {
   color: #fff;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 45px;
   margin-top: 0;
 }
 
 .interfInfoTitle {
   margin-top: 60px;
-  font-size: 50px;
+  font-size: 65px;
   font-weight: 500;
   opacity: 0; /* Start as invisible */
   transform: translateY(20px); /* Start off slightly below */
@@ -75,7 +75,7 @@
 
 .interfInfoSubtitle {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 
 @media (max-width: 768px) {

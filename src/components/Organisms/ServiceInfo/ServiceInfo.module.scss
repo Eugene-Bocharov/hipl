@@ -166,3 +166,24 @@
     }
   }
 }
+
+.dividerline {
+  margin-top: 70px;
+  background-color: #bfbfbf;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 0; /* Start with width 0 */
+  opacity: 0;
+  transition:
+    opacity 1s ease,
+    width 2s ease-out; /* Animate width over 2 seconds */
+}
+
+.dividerline.animated {
+  width: 100%;
+  opacity: 1;
+  @media (max-width: 1500px) {
+    width: 90%;
+  }
+}

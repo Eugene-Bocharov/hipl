@@ -56,13 +56,13 @@ export const ContactInfo: React.FC<ContactInfoProps> = ({
             className={`${styles.link} ${isAnimated ? styles.animated : ''}`}
             href="#"
           >
-            403-918-6333
+            +1 (438) 336 6420
           </a>
           <a
             className={`${styles.link} ${isAnimated ? styles.animated : ''}`}
             href="#"
           >
-            info@projectandesign.ca
+            4003498@gmail.com
           </a>
         </div>
         <div

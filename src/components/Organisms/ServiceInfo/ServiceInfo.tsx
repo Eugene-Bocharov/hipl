@@ -8,7 +8,6 @@ interface ServiceInfoProps {
     description: string;
     link: string;
     listItems?: string[];
-    price: string; // Add price property
   }[];
 }
 
@@ -52,6 +51,29 @@ export function ServiceInfo(props: ServiceInfoProps) {
     };
   }, [props.services.length]);
 
+  const [isDividerAnimated, setIsDividerAnimated] = useState(false);
+  const dividerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsDividerAnimated(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    if (dividerRef.current) {
+      observer.observe(dividerRef.current);
+    }
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className={styles.container} ref={containerRef}>
       <h1 className={styles.mainTitle}>Our Services</h1>
@@ -74,7 +96,6 @@ export function ServiceInfo(props: ServiceInfoProps) {
               </ul>
             )}
             <p className={styles.serviceDescription}>{service.description}</p>
-            <p className={styles.servicePrice}>{service.price}</p>{' '}
             {/* Add price */}
             <a
               className={styles.getQuoteButton}
@@ -87,6 +108,10 @@ export function ServiceInfo(props: ServiceInfoProps) {
           </div>
         ))}
       </div>
+      <div
+        ref={dividerRef}
+        className={`${styles.dividerline} ${isDividerAnimated ? styles.animated : ''}`}
+      ></div>
     </div>
   );
 }

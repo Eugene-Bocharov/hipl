@@ -43,35 +43,25 @@ export function Homepage() {
       <HomeWelc />
       <InterfInfo
         title="About us"
-        description="At Hipl, we specialize in creating custom websites and web designs that help small businesses in Montreal stand out and succeed. Whether you're just starting or looking to update your current site, we bring your vision to life."
+        description="We build websites that get noticed — and get results.
+At Hipl, we design custom websites for small businesses that want more than just an online presence. We focus on clean design, fast performance, and a user experience that turns visitors into customers.
+
+"
+        // description="At Hipl, we specialize in creating custom websites and web designs that help small businesses in Montreal stand out and succeed. Whether you're just starting or looking to update your current site, we bring your vision to life."
       />
       <BigPic video={2} title="Give Emotions" link="#" />
       <StatComp
         stats={[
-          { value: '100', label: 'Users' },
-          { value: '200', label: 'Posts' },
-          { value: '300', label: 'Comments' },
+          { value: '$300K+ ', label: 'In total client sales' },
+          { value: '3', label: 'Years in business' },
+          { value: '100%', label: 'Project delivery rate' },
+
+          { value: '7', label: 'Industries served' },
         ]}
       />
-      {/* <PicDesc
-        title="Our specialization"
-        description="We specialize in exterior finishings and interior projects. We take pride in tackling challenges head-on, ensuring every project reflects our commitment."
-        position="normal"
-        pic={photos.extr[8]}
-      /> */}
-      {/* <DarkTitleDesk
-        title="Commitment to excellence"
-        description="Our team is passionate about transforming spaces and making your vision into reality. Whether it’s a new exterior project or cozy interior update, we are here to help."
-        link="#"
-      /> */}
-      {/* <PicDesc
-        title="Let’s build something amazing together!"
-        description=""
-        position="reversed"
-        pic={photos.nc[3]}
-      /> */}
-      <Partners title="Our Clients" pic=[] />
-      <Title title="Ready to work with us?" link="/contact" />
+
+      {/* <Partners title="Our Clients" pic={[]} /> */}
+      <Title title="Ready to get started?" link="/contact" />
       <Footer />
       {/* <Openscreen /> */}
     </>

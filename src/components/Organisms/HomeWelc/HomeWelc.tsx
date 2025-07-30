@@ -62,13 +62,14 @@ export function HomeWelc() {
               className={`${styles.title} ${isAnimated ? styles.animated : ''} ${styles.interfInfoTitle}`}
               ref={titleRef}
             >
-              Web Development Agency
+              Websites That Build Businesses
+              {/* Web Development Agency */}
             </h1>
             <h3
               className={`${styles.subtitle} ${isAnimated ? styles.animated : ''} ${styles.interfInfoSubtitle}`}
               ref={subtitleRef}
             >
-              By Yevhenii Bocharov
+              Founded by Yevhenii Bocharov
             </h3>
           </div>
         </div>

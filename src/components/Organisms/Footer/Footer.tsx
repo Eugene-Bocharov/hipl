@@ -13,30 +13,16 @@ export const Footer = () => {
           </div>
           <div className={styles.dividerBox}>
             <div className={styles.collumn}>
-              <p className={styles.subTitle}>Services</p>
-              <a className={styles.link} href="/services#massages">
-                Massages
+              <p className={styles.subTitle}>Pages</p>
+
+              <a className={styles.link} href="/">
+                Home
               </a>
-              <a className={styles.link} href="/services#sweet">
-                Sweet
+              <a className={styles.link} href="/portfolio">
+                Portfolio
               </a>
-              <a className={styles.link} href="/services#brazilian">
-                Brazilian
-              </a>
-              <a className={styles.link} href="/services#threading">
-                Threading
-              </a>
-              <a className={styles.link} href="/services#hot-waxing">
-                Hot Waxing
-              </a>
-              <a className={styles.link} href="/services#skin">
-                Skin
-              </a>
-              <a className={styles.link} href="/services#nails">
-                Nails
-              </a>
-              <a className={styles.link} href="/services#lashes">
-                Lashes
+              <a className={styles.link} href="/contact">
+                Contact
               </a>
             </div>
             <div className={styles.collumn}>
@@ -66,13 +52,10 @@ export const Footer = () => {
             <div className={styles.collumn}>
               <p className={styles.subTitle}>Contact</p>
               <a className={styles.link} href="#">
-                780 709 9979 (text only)
+                +1 (438) 336 6420
               </a>
               <a className={styles.link} href="#">
-                kazahealthnbeauty@gmail.com
-              </a>
-              <a className={styles.link} href="#">
-                76 Harrow Circle NW, EDMONTON AB T5A 2S5
+                4003498@gmail.com
               </a>
               <a className={styles.link} href="/contact#form">
                 Write us
@@ -83,7 +66,7 @@ export const Footer = () => {
         <div className={styles.divider}></div>
         <div className={styles.midContainer}>
           <p className={styles.rightT}>
-            Copyright © 2024 KazaHealthnBeauty - All rights reserved
+            Copyright © 2025 HIPL - All rights reserved
           </p>
         </div>
       </div>

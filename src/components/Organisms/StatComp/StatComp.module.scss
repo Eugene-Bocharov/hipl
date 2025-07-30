@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(
-    5,
+    4,
     minmax(200px, 1fr)
   ); /* Use grid with auto-fit */
   gap: 10px; /* Gap between grid items */

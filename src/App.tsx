@@ -14,7 +14,7 @@ import InterPage from './pages/ServPages/InterPage';
 import RoofingPage from './pages/ServPages/RoofingPage';
 import TestimonialsPage from './pages/ProjectsPages/TestimonialsPage';
 import NewConstr from './pages/ServPages/NewConstr';
-import { DevPage } from './pages/DevPage/DevPage';
+import { PortfolioPage } from './pages/PortfolioPage/Portfolio';
 
 function App() {
   return (
@@ -22,10 +22,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/development" element={<DevPage />} />
-          <Route path="/design" element={<AboutPage />} />
-          <Route path="/projects" element={<AboutPage />} />
-          <Route path="/appointments" element={<AboutPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Router>

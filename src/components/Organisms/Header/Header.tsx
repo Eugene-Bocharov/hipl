@@ -58,14 +58,8 @@ export const Header: React.FC<HeaderProps> = ({ isWhite = true }) => {
               <a href="/" className={styles.headerLink}>
                 Home
               </a>
-              <a href="/development" className={styles.headerLink}>
-                Development
-              </a>
-              <a href="/design" className={styles.headerLink}>
-                Design
-              </a>
-              <a href="/appointments" className={styles.headerLink}>
-                Appointments
+              <a href="/portfolio" className={styles.headerLink}>
+                Portfolio
               </a>
               <a href="/contact" className={styles.headerLink}>
                 Contact

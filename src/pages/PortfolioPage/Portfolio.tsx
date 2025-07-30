@@ -25,7 +25,7 @@ import { HalfVid } from '../../components/Organisms/HalfVid/HalfVid';
 import { ServiceInfo } from '../../components/Organisms/ServiceInfo/ServiceInfo';
 import PortfolioList from '../../components/Organisms/PortfolioList/PortfolioList';
 
-export function DevPage() {
+export function PortfolioPage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -43,57 +43,130 @@ export function DevPage() {
   const portfolioItems = [
     {
       id: 1,
-      title: 'ProjectAnDesign',
+      title: 'Project AnDesign',
       description:
-        'Construction company based in Calgary, Alberta with over a decade of experience in the industry.',
+        'We helped Projectandesign showcase their completed construction projects and services to attract new clients and grow their business. We built a responsive website, displayed their project portfolio, outlined service offerings, and integrated contact and quote request forms.',
       picLink:
         'https://images.unsplash.com/photo-1485083269755-a7b559a4fe5e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      link: '#',
+      link: 'https://projectandesign.com',
+      technologies: [
+        'React',
+        'Node.js',
+        'MongoDB',
+        'Express',
+        'Stripe',
+        'AWS',
+        'Docker',
+      ],
+      // status: 'completed',
+      completed: true,
     },
     {
       id: 2,
       title: 'Kaza Health n Beauty',
       description:
-        'Health and beauty spa in Edmonton Alberta that provides various services that are tailored to your needs.',
+        'Kaza needed a website to highlight their services, pricing, and location to bring in new clients. We delivered a sleek, mobile-friendly site that clearly presents their offerings, contact details, and salon information.',
       picLink:
         'https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      link: '#',
+      link: 'https://kazahealthbeauty.com',
+      technologies: ['React Native', 'Firebase', 'Redux', 'Expo', 'TypeScript'],
+      // status: 'completed',
+      completed: true,
     },
     {
       id: 3,
-      title: 'Svstoptax',
+      title: 'Art Blooms',
       description:
-        'A leading firm with decades of experience, they provide comprehensive accounting, legal, and tax services to a diverse clientele.',
+        'Art Blooms offers painting classes for kids and wanted a site that could simplify signups and show course information. We designed a playful, user-friendly site that displays class details, integrates registration and payment, and reflects the creative vibe of the school.',
       picLink:
-        'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      link: '#',
+        'https://images.unsplash.com/photo-1547891654-e66ed7ebb968?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://artblooms.club/',
+      technologies: [
+        'Python',
+        'TensorFlow',
+        'Flask',
+        'PostgreSQL',
+        'Docker',
+        'Redis',
+      ],
+      // status: 'completed',
+      completed: true,
     },
     {
-      id: 1,
-      title: 'ProjectAnDesign',
+      id: 4,
+      title: 'SVS Top Tax',
       description:
-        'Construction company based in Calgary, Alberta with over a decade of experience in the industry.',
+        'SVS Top Tax had an existing website but needed help with updates and new sections. We supported them by adding service pages, improving layout and responsiveness, and performing regular maintenance to keep the site sharp and functional.',
       picLink:
-        'https://images.unsplash.com/photo-1485083269755-a7b559a4fe5e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      link: '#',
+        'https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://artblooms.club/',
+      technologies: [
+        'Python',
+        'TensorFlow',
+        'Flask',
+        'PostgreSQL',
+        'Docker',
+        'Redis',
+      ],
+      // status: 'completed',
+      completed: true,
     },
     {
-      id: 3,
-      title: 'Svstoptax',
+      id: 5,
+      title: 'PurPros 360',
       description:
-        'A leading firm with decades of experience, they provide comprehensive accounting, legal, and tax services to a diverse clientele.',
+        'PurPros 360 needed a full Shopify store for their beauty and manicure products. We handled the design and development, organized products into collections, set up payment and shipping systems, and customized the theme to match their branding. ',
       picLink:
-        'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      link: '#',
+        'https://images.unsplash.com/photo-1499313843378-eebdb187f629?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://purepros360.com/',
+      technologies: [
+        'Python',
+        'TensorFlow',
+        'Flask',
+        'PostgreSQL',
+        'Docker',
+        'Redis',
+      ],
+      // status: 'completed',
+      completed: true,
     },
     {
-      id: 2,
-      title: 'Kaza Health n Beauty',
+      id: 6,
+      title: 'BET Transport',
       description:
-        'Health and beauty spa in Edmonton Alberta that provides various services that are tailored to your needs.',
+        'This was our first project — BET Transport needed a professional web presence to show their services and help clients get in touch. We built a one-page business site with clean layout, clear service info, and contact details including a map.',
       picLink:
-        'https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      link: '#',
+        'https://images.unsplash.com/photo-1618582948377-cd7eb0e8cb14?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://bet-logistics.ca/',
+      technologies: [
+        'Python',
+        'TensorFlow',
+        'Flask',
+        'PostgreSQL',
+        'Docker',
+        'Redis',
+      ],
+      // status: 'completed',
+      completed: true,
+    },
+    {
+      id: 7,
+      title: 'CafePop',
+      description:
+        'Currently in progress, we’re designing and building a modern website for CafePop to help customers browse their menu, find contact info, and access delivery platforms like Uber Eats. The goal is to create a seamless experience that brings more people to the café, both online and in person.',
+      picLink:
+        'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://www.cafepop.ca/',
+      technologies: [
+        'Python',
+        'TensorFlow',
+        'Flask',
+        'PostgreSQL',
+        'Docker',
+        'Redis',
+      ],
+      // status: 'completed',
+      completed: true,
     },
   ];
 
@@ -105,10 +178,7 @@ export function DevPage() {
       {/* Uncomment to display homepage content */}
       {/* <HomeWelc /> */}
 
-      <TextTitle
-        // noDivider={true}
-        text="Lets make your astonishing website together !"
-      />
+      <TextTitle noDivider={true} text="Our Work" />
       {/* <StatComp
         stats={[
           { value: '100', label: 'Users' },
@@ -121,14 +191,14 @@ export function DevPage() {
         ]}
         isMarginTop={true}
       /> */}
-      <HalfVid
+      {/* <HalfVid
         title="Give Emotions"
         description="At Hipl, we specialize in creating custom websites and web designs that help small businesses in Montreal stand out and succeed. Whether you're just starting or looking to update your current site, we bring your vision to life. At Hipl, we specialize in creating custom websites and web designs that help small businesses in Montreal stand out and succeed. Whether you're just starting or looking to update your current site, we bring your vision to life."
         video={3}
         vidTitle=""
         link=""
-      />
-      <ServiceInfo
+      /> */}
+      {/* <ServiceInfo
         title="Our Services"
         services={[
           {
@@ -142,7 +212,6 @@ export function DevPage() {
               'Fast loading speeds',
               'Fast loading speeds',
             ],
-            price: 'From 500$', // Add price
           },
           {
             name: 'Web Design',
@@ -155,7 +224,6 @@ export function DevPage() {
               'Fast loading speeds',
               'Fast loading speeds',
             ],
-            price: 'From 500$', // Add price
           },
           {
             name: 'Web Design',
@@ -168,12 +236,11 @@ export function DevPage() {
               'Fast loading speeds',
               'Fast loading speeds',
             ],
-            price: 'From 500$', // Add price
           },
         ]}
-      />
+      /> */}
       <PortfolioList items={portfolioItems} />
-      <Title title="Ready to work with us?" link="/contact" />
+      <Title title="Ready to get started?" link="/contact" />
       <Footer />
       {/* <Openscreen /> */}
     </>
