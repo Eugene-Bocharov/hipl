@@ -43,26 +43,53 @@ const HideOnScroll: React.FC<HeaderProps> = ({ children, isMenuOpen }) => {
   );
 };
 
-export const HeaderMob = () => {
+export const HeaderMob = ({ isWhite = true }: { isWhite?: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log({ isMenuOpen });
+  const [scrolled, setScrolled] = useState(isWhite);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (!isWhite) {
+        setScrolled(window.scrollY > 0);
+      } else {
+        setScrolled(true);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isWhite]);
 
   return (
     <>
       <div className={styles.header}>
         <HideOnScroll isMenuOpen={isMenuOpen}>
-          <AppBar position="fixed" className={styles.appBar}>
+          <AppBar
+            position="fixed"
+            className={
+              styles.appBar +
+              (scrolled || isMenuOpen ? ' ' + styles.scrolled : '') +
+              (isMenuOpen ? ' ' + styles.menuOpen : '')
+            }
+          >
             <Toolbar className={styles.toolbar}>
               <div className={styles.incontainer}>
                 <div className={styles.divider}>
                   <div className={styles.logocontainer}>
-                    <div className={styles.logo}></div>
+                    <div
+                      className={
+                        `${styles.logo} ` +
+                        (scrolled || isMenuOpen
+                          ? styles.logoScrolled
+                          : styles.logoDefault)
+                      }
+                    />
                   </div>
                   <div>
                     <Hamburger
                       toggled={isMenuOpen}
                       toggle={setIsMenuOpen}
-                      color="#000"
+                      color={scrolled || isMenuOpen ? '#000' : '#fff'}
                     />
                   </div>
                 </div>
@@ -79,9 +106,7 @@ export const HeaderMob = () => {
             <HeaderLinkMob text="Contact" href="/contact" />
           </div>
         </div>
-      ) : (
-        <></>
-      )}
+      ) : null}
     </>
   );
 };

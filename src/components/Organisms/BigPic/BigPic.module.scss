@@ -47,6 +47,21 @@
   font-style: normal;
 }
 
+@media (max-width: 450px) {
+  .container {
+    margin-top: 70px;
+  }
+  .contentTextBox {
+    margin-left: 10px;
+    margin-right: auto;
+    margin-bottom: 10%;
+    font-style: normal;
+    text-align: left;
+    display: block;
+    max-width: 90vw;
+  }
+}
+
 .title {
   color: #fff;
   font-size: 60px;

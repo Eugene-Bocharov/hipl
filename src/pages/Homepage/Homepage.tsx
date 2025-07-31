@@ -39,7 +39,11 @@ export function Homepage() {
   return (
     <>
       {/* Uncomment the code below to display the homepage content */}
-      {windowWidth <= 1100 ? <HeaderMob /> : <Header isWhite={false} />}
+      {windowWidth <= 1100 ? (
+        <HeaderMob isWhite={false} />
+      ) : (
+        <Header isWhite={false} />
+      )}
       <HomeWelc />
       <InterfInfo
         title="About us"

@@ -22,6 +22,12 @@
   margin-top: 50px; /* Add top margin */
 }
 
+@media (max-width: 450px) {
+  .marginTop {
+    margin-top: 0 !important;
+  }
+}
+
 .stat {
   text-align: center;
   opacity: 0;
