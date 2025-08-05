@@ -75,13 +75,13 @@ export const ContactInfo: React.FC<ContactInfoProps> = ({
           </p>
           <a
             className={`${styles.link} ${isAnimated ? styles.animated : ''}`}
-            href="https://www.instagram.com/projectandesign/profilecard/?igsh=dWRlaHhqNDl6Zmt2"
+            href="#"
           >
             Instagram
           </a>
           <a
             className={`${styles.link} ${isAnimated ? styles.animated : ''}`}
-            href="https://www.facebook.com/profile.php?id=61553015094076"
+            href="#"
           >
             Facebook
           </a>

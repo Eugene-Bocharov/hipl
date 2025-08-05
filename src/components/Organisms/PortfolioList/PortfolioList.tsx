@@ -47,24 +47,38 @@ const PortfolioList: React.FC<PortfolioListProps> = ({ items }) => {
 
   // Animate portfolio grid
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsAnimated(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (portfolioRef.current) {
-      observer.observe(portfolioRef.current);
+    const isMobile = window.innerWidth < 800;
+    let timeoutId: NodeJS.Timeout | null = null;
+    if (isMobile) {
+      if (filtersAnimated) {
+        // Delay grid animation until filtersAnimated is true
+        timeoutId = setTimeout(() => setIsAnimated(true), 100);
+      } else {
+        setIsAnimated(false);
+      }
+    } else {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsAnimated(true);
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      if (portfolioRef.current) {
+        observer.observe(portfolioRef.current);
+      }
+      return () => {
+        observer.disconnect();
+      };
     }
     return () => {
-      observer.disconnect();
+      if (timeoutId) clearTimeout(timeoutId);
     };
-  }, []);
+  }, [filtersAnimated]);
 
   // Animate searchbar and filters
   // ...removed filtersRef observer, now using timeout for animation...

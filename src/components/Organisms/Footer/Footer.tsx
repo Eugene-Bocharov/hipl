@@ -27,25 +27,16 @@ export const Footer = () => {
             </div>
             <div className={styles.collumn}>
               <p className={styles.subTitle}>Social Media</p>
-              <a
-                className={styles.link}
-                href="https://www.instagram.com/kaza_health_beauty/"
-              >
+              <a className={styles.link} href="#">
                 Instagram
               </a>
-              <a
-                className={styles.link}
-                href="https://www.facebook.com/profile.php?id=61567144888475"
-              >
+              <a className={styles.link} href="#">
                 Facebook
               </a>
-              <a className={styles.link} href="https://x.com/KhealthNbeauty">
+              <a className={styles.link} href="#">
                 X
               </a>
-              <a
-                className={styles.link}
-                href="https://www.linkedin.com/in/kaza-health-n-beauty-04739933a/"
-              >
+              <a className={styles.link} href="#">
                 LinkedIn
               </a>
             </div>
@@ -66,7 +57,8 @@ export const Footer = () => {
         <div className={styles.divider}></div>
         <div className={styles.midContainer}>
           <p className={styles.rightT}>
-            Copyright © 2025 HIPL - All rights reserved
+            Copyright © 2025 HIPL - All rights reserved | Founded by Yevhenii
+            Bocharov
           </p>
         </div>
       </div>
